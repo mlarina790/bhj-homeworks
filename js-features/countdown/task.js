@@ -2,7 +2,7 @@
 
 let time = 59;
 let timerEl = document.getElementById("timer");
-let inter = setInterval(updateTimer, 1000); 
+let inter = setInterval(updateTimer, 1000);
 
 function updateTimer() {
     let seconds = time % 60;
@@ -12,14 +12,8 @@ function updateTimer() {
     if (seconds <= 0) {
         clearInterval(inter);
         alert('Вы победили в конкурсе.');
-    }  
+    }
 }
-
-
-
-
-
-
 
 
 
