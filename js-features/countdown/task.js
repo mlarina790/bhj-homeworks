@@ -1,7 +1,7 @@
+'use strict'
 
-
-let time = 3;
-const timerEl = document.getElementById("timer");
+let time = 59;
+let timerEl = document.getElementById("timer");
 let inter = setInterval(updateTimer, 1000); 
 
 function updateTimer() {
@@ -11,7 +11,7 @@ function updateTimer() {
     time--;
     if (seconds <= 0) {
         clearInterval(inter);
-        alert('Стоп таймер и пуск ракеты!');
+        alert('Вы победили в конкурсе.');
     }  
 }
 
