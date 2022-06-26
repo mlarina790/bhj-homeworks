@@ -81,12 +81,17 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
+    let successSelect = [];
+    for (let i = 0; i < this.input.options.length; i++) {
+      if (this.input.options[i].text.indexOf(text) !== -1) {
+        let selectionItem = {
+          text: this.input.options[i].text,
+          value: this.input.options[i].value
+        }
+        let addSelect = successSelect.push(selectionItem);
       }
-    ];
+    }
+    return successSelect;
   }
 }
 
